@@ -58,3 +58,27 @@ function scrollUp(){
     if(this.scrollY >= 350) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
+/*=============== CONTACT FORM POPUP ===============*/
+let submitted = false;
+
+function showPopup() {
+    // Show modal
+    const modal = document.getElementById('success-modal');
+    if (modal) {
+        modal.classList.add('active-modal');
+    }
+    // Reset form
+    const form = document.querySelector('.contact__form');
+    if (form) {
+        form.reset();
+    }
+    submitted = false;
+}
+
+function closePopup() {
+    const modal = document.getElementById('success-modal');
+    if (modal) {
+        modal.classList.remove('active-modal');
+    }
+}

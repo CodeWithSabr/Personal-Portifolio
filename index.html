@@ -257,7 +257,8 @@
                 </div>
 
                 <div class="contact__content">
-                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdIcaXGuFy5LNwsx8dTzRehH6bjx0OgGoCzo6dRRjV-m5a3JQ/formResponse" method="POST" target="_blank" class="contact__form">
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { showPopup(); }"></iframe>
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdIcaXGuFy5LNwsx8dTzRehH6bjx0OgGoCzo6dRRjV-m5a3JQ/formResponse" method="POST" target="hidden_iframe" class="contact__form" onsubmit="submitted=true;">
                         <div class="contact__form-div">
                             <label class="contact__form-tag">Name</label>
                             <input type="text" name="entry.62543129" placeholder="Insert your name" class="contact__form-input" required>
@@ -280,6 +281,16 @@
                 </div>
             </div>
         </section>
+
+        <!-- Success Modal -->
+        <div class="modal" id="success-modal">
+            <div class="modal__content">
+                <i class='bx bx-check-circle modal__icon'></i>
+                <h3 class="modal__title">Message Sent!</h3>
+                <p class="modal__description">Thank you for reaching out. I'll get back to you soon.</p>
+                <button class="button modal__button" onclick="closePopup()">Close</button>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->

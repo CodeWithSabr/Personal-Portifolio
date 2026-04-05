@@ -798,9 +798,6 @@ img {
   .projects__container {
     grid-template-columns: repeat(3, 1fr);
   }
-  .contact__form {
-    width: 360px;
-  }
   .footer__container {
     padding: 3rem 0;
     display: flex;

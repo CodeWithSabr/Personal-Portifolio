@@ -1,8 +1,9 @@
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
-window.scrollTo(0, 0);
-
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+});
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
